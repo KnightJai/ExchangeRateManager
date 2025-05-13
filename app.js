@@ -1,6 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const exchangeRoutes = require('./routes/exchangeRoutes');
+const exchangeRoutes = require('./src/routes/exchangeRoutes');
 
 dotenv.config();
 
