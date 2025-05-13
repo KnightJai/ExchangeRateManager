@@ -1,4 +1,4 @@
-const { getConvertedAmount } = require('../services/exchangeService');
+const { getConvertedAmount, getHistoricalRateFromAPI } = require('../services/exchangeService');
 const { validateDate } = require('../utils/dateValidator');
 
 const convertCurrency = async (req, res) => {
@@ -22,4 +22,23 @@ const convertCurrency = async (req, res) => {
   }
 };
 
-module.exports = { convertCurrency };
+const getHistoricalRate = async (req, res) => {
+  try {
+    const { from, to, date } = req.query;
+
+    if (!from || !to || !date) {
+      return res.status(400).json({ error: 'Missing required query parameters: from, to, date' });
+    }
+
+    validateDate(date);
+
+    const rate = await getHistoricalRateFromAPI(from.toUpperCase(), to.toUpperCase(), date);
+    return res.json({ rate });
+
+  } catch (error) {
+    console.error(error);
+    res.status(400).json({ error: error.message });
+  }
+};
+
+module.exports = { convertCurrency, getHistoricalRate };
