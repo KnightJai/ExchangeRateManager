@@ -1,12 +1,15 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const exchangeRoutes = require('./routes/exchangeRoutes');
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.json()); // Allows us to handle JSON in requests
+app.use(express.json());
+
+app.use('/api', exchangeRoutes);
 
 app.get('/', (req, res) => {
   res.send('Exchange Rate Service is running!');
