@@ -31,3 +31,9 @@ A backend service to fetch real-time and historical currency exchange rates, per
 git clone https://github.com/KnightJai/ExchangeRateManager
 cd ExchangeRateManager
 npm install
+
+Create a .env file with
+PORT=3000
+EXCHANGE_API_URL=https://api.exchangerate.host
+CACHE_TTL=3600
+ACCESS_KEY=0f0bdf1a86e851c223d8c0554ed6daa2
