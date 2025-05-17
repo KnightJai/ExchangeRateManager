@@ -1,0 +1,29 @@
+# Node modules (always ignore)
+node_modules/
+
+# Environment variables (never commit API keys)
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Jest coverage reports
+coverage/
+
+# OS system files
+.DS_Store
+
+# Editor folders
+.vscode/
+
+# Docker ignore file (optional)
+.dockerignore
+
+# Build directories (if you ever use them)
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
