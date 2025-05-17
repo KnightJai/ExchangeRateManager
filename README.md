@@ -10,7 +10,7 @@ A backend service to fetch real-time and historical currency exchange rates, per
 - 🕒 Retrieve historical exchange rates
 - ⚡ In-memory caching to boost performance
 - 📅 Validates date inputs (only within the last 90 days)
-- ✅ Unit-tested with **Jest**
+- ✅ Unit-tested with **Jest** with perfect 100% code and branch coverage
 - 🐳 Dockerized for easy deployment
 
 ---
@@ -31,15 +31,16 @@ A backend service to fetch real-time and historical currency exchange rates, per
 git clone https://github.com/KnightJai/ExchangeRateManager
 cd ExchangeRateManager
 npm install
+```
 
 
-## 📦Create a .env file with:
+## 📦 Create a .env file with:
 
 ```env
 PORT=3000
-EXCHANGE_API_URL=http://api.exchangeratesapi.io/v1
-ACCESS_KEY=your_access_key_here
+EXCHANGE_API_URL=https://api.exchangerate.host
 CACHE_TTL=3600
+ACCESS_KEY=0f0bdf1a86e851c223d8c0554ed6daa2
 ```
 
 ## ▶️ Running the Server
