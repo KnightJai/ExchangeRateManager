@@ -21,7 +21,7 @@ const getConvertedAmount = async (from, to, amount, date) => {
   const response = await axios.get(url);
   console.log('API Response:', response.data);
 
-  if (!response.data || !response.data.result) {
+  if (!response.data || !response.data.result || !response.data.info) {
     throw new Error('Conversion failed. Check your API key or inputs.');
   }
 
