@@ -37,12 +37,7 @@ npm install
 ## 📦 Create a .env file with:
 
 ```env
-PORT=3000
-EXCHANGE_API_URL=https://api.exchangerate.host
-CACHE_TTL=3600
-ACCESS_KEY=0f0bdf1a86e851c223d8c0554ed6daa2
-CRYPTO_API_URL=http://api.coinlayer.com
-CRYPTO_ACCESS_KEY=c02e3b1e863889bc08ca54a90e2db9c9
+mail me at jaicreation12@gmail.com to get it
 ```
 
 ## ▶️ Running the Server
